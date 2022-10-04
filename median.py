@@ -1,5 +1,6 @@
 """Median calculator."""
 """ENTER YOUR SOLUTION HERE!"""
+import math
 
 while True:
     try:
@@ -9,4 +10,11 @@ while True:
         print("Some input could not be converted to a number!")
     else:
         break
-print(numbers)
+
+numbers.sort()
+if len(numbers) % 2 == 1:
+    print(numbers[math.ceil(len(numbers) / 2 - 1)])
+else: #number is odd
+    # print(int(len(numbers) / 2 - 1))
+    # print(int(len(numbers) / 2))
+    print((numbers[int(len(numbers) / 2 - 1)] + numbers[int(len(numbers) / 2)]) / 2)
